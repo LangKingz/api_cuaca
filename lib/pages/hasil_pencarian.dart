@@ -12,7 +12,7 @@ class HasilPencarian extends StatelessWidget {
   Widget build(BuildContext context) {
     Future<Map<String, dynamic>> getDataFromAPI() async {
       final response = await http.get(Uri.parse(
-          "https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=0c216bcb093b1d2d64f20c9870092b4f&units=metric"));
+          "https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=&units=metric"));
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
 
